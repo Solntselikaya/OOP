@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Element.Teacher;
 
 namespace ScheduleCreator
 {
@@ -16,9 +17,9 @@ namespace ScheduleCreator
             Lab,
             Test
         }
-        private string audience; 
+        private Classroom audience; 
         private string subject; 
-        private string teacher; 
+        private Teacher teacher; 
         private Type lessonType; 
 
     public PrintLesson()
@@ -45,5 +46,18 @@ namespace ScheduleCreator
         Console.WriteLine(audience,": ", teacher);
         Console.ResetColor();
     }
-    }
+
+    //public void Get()//вывод
+    //{
+
+    //}
+
+    //public void Set(auto audi, auto sub, auto teac, auto lesType)//ввод
+    //{
+    //    if (isString(audi) and day<6 and lesson >= 0 and lesson<7)
+    //            return isFree(day, lesson)
+    //        else Console.WriteLine("Ошибка ввода даты или номера пары");
+    //    return false;
+    //}
+}   
 }
