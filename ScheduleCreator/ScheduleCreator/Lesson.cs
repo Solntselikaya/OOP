@@ -59,5 +59,5 @@ namespace ScheduleCreator
     //        else Console.WriteLine("Ошибка ввода даты или номера пары");
     //    return false;
     //}
-}   
+    }   
 }
