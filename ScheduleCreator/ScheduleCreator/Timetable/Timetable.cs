@@ -8,6 +8,16 @@ namespace ScheduleCreator
 {
     internal class Timetable
     {
+        private Lesson[,] timetable;
 
+        private void GenerateTimetable(List<StudyPlan> studyPlanList)
+        {
+
+        }
+
+        private void CheckIfElementIsFree(IElement element, int first, int second)
+        {
+
+        }
     }
 }
