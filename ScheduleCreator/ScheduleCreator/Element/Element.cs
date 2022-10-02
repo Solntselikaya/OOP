@@ -16,12 +16,8 @@ namespace ScheduleCreator
         abstract public void DoBusy(int day, int lesson)
         {
             if (day >= 0 and day<6 and lesson >=0 and lesson<7)
-                doBusy(day, lesson)
+                workload[day][lesson] = true;
             else Console.WriteLine("Ошибка ввода даты или номера пары");
-        }
-        abstract protected void doBusy(int day, int lesson)
-        {
-            Cell[day][lesson] = true;
         }
     }
 }

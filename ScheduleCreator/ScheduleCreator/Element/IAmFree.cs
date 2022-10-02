@@ -9,6 +9,5 @@ namespace ScheduleCreator
     interface IAmFree
     {
         void IsFree(int day, int lesson);
-        void isFree(int day, int lesson);
     }
 }

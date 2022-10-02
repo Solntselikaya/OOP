@@ -10,18 +10,15 @@ namespace ScheduleCreator
     {
         private int amountOfStudents;
 
-        public bool IsFree(int day, int lesson)
+        bool IsFree(int day, int lesson)
         {
-            if (day >= 0 and day<6 and lesson >= 0 and lesson<7)
-                return isFree(day, lesson)
-            else Console.WriteLine("Ошибка ввода даты или номера пары");
-            return false;
-        }
-        protected bool isFree(int day, int lesson)
-        {
-            if (Cell[day][lesson] == true) ;
-            return true
+            if (day >= 0 and day<6 && lesson >= 0 and lesson<7){
+                if (workload[day][lesson] == true)
+                    return true;
                 else return false;
+            }
+            else Console.WriteLine("Вот так))Ошибка ввода даты или номера пары");
+            return false;
         }
     }
 
