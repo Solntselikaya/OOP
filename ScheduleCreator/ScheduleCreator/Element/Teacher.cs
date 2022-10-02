@@ -9,6 +9,7 @@ namespace ScheduleCreator
    
     internal class Teacher : Element
     {
+        public list<string> subgect;
         bool IsFree(int day, int lesson)
         {
             if (day >= 0 and day<6 && lesson >= 0 and lesson<7){

@@ -8,6 +8,13 @@ namespace ScheduleCreator
 {
     abstract class Element: IAmFree
     {
+        protected string name = "Undefined";
+        public string Name
+        {
+            set { name = value; }
+            get { return name; }
+        }
+
         //private string name;//фамилия преподавателя/номер группы/номер аудитории(для дочерних элементов)
         abstract private bool[6][7] workload;//массив 6 на 7 (6 дней и каждый день максимум 7 пар)   
 
