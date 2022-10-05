@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace test
+namespace ScheduleCreator
 {
     internal struct Study
     {
-        private string name;
-        private Audience audience;
-        private Teacher teacher;
-        private LType lessonType;
+        string name = "Undefined";
+        Audience audience;
+        Teacher teacher;
+        LType lessonType;
     }
 }
