@@ -13,21 +13,21 @@ namespace ScheduleCreator
         public List<ClassRoom> inputClassrooms;
         public List<Teacher> inputTeachers;
 
-        public void GetTeachers(List<Teacher> inputTeachers)
+        public List<Teacher> GetTeachers()
         {
-            inputTeachers.Add(Console.ReadLine);
-            
+            return inputTeachers;
         }
 
-        public void GetClassRooms(List<ClassRoom> inputClassrooms)
+        public void GetClassRooms()
         {
-            inputClassrooms.Add(Console.ReadLine);
+            return inputClassrooms;
         }
 
-        public void GetStudyPlans(List<StudyPlan> inputStudyPlans)
+        public void GetStudyPlans()
         {
-            inputStudyPlans.Add(Console.ReadLine);
+            return inputStudyPlans;
         }
+        
  
     }
 }
