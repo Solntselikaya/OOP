@@ -9,25 +9,26 @@ namespace ScheduleCreator
     public class  MainActivity{
 
         private Scheddule scheddule;
-        public List<StudyPlan> inputStudyPlans;
-        public List<ClassRoom> inputClassrooms;
-        public List<Teacher> inputTeachers;
+       
+        
 
-        public List<Teacher> GetTeachers()
+        public List<Teacher> AssignTeachers()
         {
-            return inputTeachers;
+            
         }
 
-        public void GetClassRooms()
+        public void AssignClassrooms()
         {
-            return inputClassrooms;
+            
+            
         }
 
-        public void GetStudyPlans()
+        public void AssignStudyPlans()
         {
-            return inputStudyPlans;
+            
+            
         }
         
- 
+
     }
 }
