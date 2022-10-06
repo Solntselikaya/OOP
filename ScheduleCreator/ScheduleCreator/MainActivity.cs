@@ -14,20 +14,25 @@ namespace ScheduleCreator
         {
 
             Console.Write("Введите имя учителя: ");
-            inputTeachers.Add(new Teacher());
+            var name = Console.Readline();
+            inputTeachers.Add(new Teacher(){
+                Name = name,
+            });
         }
 
         public void AssignClassrooms()
         {
             Console.Write("Введите  аудиторию: ");
-             inputClassrooms.Add(new Classroom());
+            var classroom = Console.Readline();
+             inputClassrooms.Add(new Classroom(){ Name = classroom});
             
         }
 
         public void AssignStudyPlans()
         {
              Console.Write("Введите StudyPlan: ");
-             inputStudyPlans.Add(new StudyPlan());
+              var tudyPlan = Console.Readline();
+             inputStudyPlans.Add(new StudyPlan(){NumOfGroup = StudyPlan });
         }
         
 
