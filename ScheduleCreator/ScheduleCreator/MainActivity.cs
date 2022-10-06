@@ -12,21 +12,22 @@ namespace ScheduleCreator
        
         public void AssignTeachers()
         {
-            
+
             Console.Write("Введите имя учителя: ");
             inputTeachers.Add(new Teacher());
         }
 
         public void AssignClassrooms()
         {
-            return inputClassrooms;
+            Console.Write("Введите имя аудитории: ");
+             inputClassrooms.Add(new Classroom());
             
         }
 
         public void AssignStudyPlans()
         {
-            return inputStudyPlans;
-            
+             Console.Write("Введите имя StudyPlan: ");
+             inputStudyPlans.Add(new StudyPlan());
         }
         
 
