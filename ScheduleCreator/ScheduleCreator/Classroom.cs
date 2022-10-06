@@ -13,9 +13,7 @@ namespace ScheduleCreator
         bool IsFree(int day, int lesson)
         {
             if (day >= 0 && day<6 && lesson >= 0 && lesson<7){
-                if (workload[day][lesson] == true)
-                    return true;
-                else return false;
+                return workload[day][lesson];
             }
             else Console.WriteLine("Ого! Ошибка ввода даты или номера пары");
             return false;
