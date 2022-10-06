@@ -19,14 +19,14 @@ namespace ScheduleCreator
 
         public void AssignClassrooms()
         {
-            Console.Write("Введите имя аудитории: ");
+            Console.Write("Введите  аудиторию: ");
              inputClassrooms.Add(new Classroom());
             
         }
 
         public void AssignStudyPlans()
         {
-             Console.Write("Введите имя StudyPlan: ");
+             Console.Write("Введите StudyPlan: ");
              inputStudyPlans.Add(new StudyPlan());
         }
         
