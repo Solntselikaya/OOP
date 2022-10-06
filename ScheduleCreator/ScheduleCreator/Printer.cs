@@ -11,7 +11,52 @@ namespace ScheduleCreator
     {
         public void PrintTimetableOfGroup(string number)
         {
+            Console.WriteLine($"Расписание группы №{number}");
+            Console.WriteLine(" ");
+            Console.WriteLine("Понедельник");
+            printDayTimetable(0, number);
+            Console.WriteLine("Вторник");
+            printDayTimetable(1, number);
+            Console.WriteLine("Среда");
+            printDayTimetable(2, number);
+            Console.WriteLine("Четверг");
+            printDayTimetable(3, number);
+            Console.WriteLine("Пятница");
+            printDayTimetable(4, number);
+            Console.WriteLine("Суббота");
+            printDayTimetable(5, number);
+        }
 
+        private void printDayTimetable(int day, string number)
+        {
+            Timetable nowTimetable = Schedule.schedule[number];
+            for (int i = 0; i < 7; i++)
+            {
+                switch (nowTimetable[day,i].lessonType)
+                {
+                    case "Lecture":
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        break;
+                    case "Seminar":
+                        Console.ForegroundColor = ConsoleColor.Yellow;
+                        break;
+                    case "Practice":
+                        Console.ForegroundColor = ConsoleColor.DarkBlue;
+                        break;
+                    case "Lab":
+                        Console.ForegroundColor = ConsoleColor.Cyan;
+                        break;
+                    case "Test":
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        break;
+                }
+                Console.WriteLine(" ");
+                Console.WriteLine($"Пара №{i} - {nowTimetable[day,i].name}");
+                Console.WriteLine($"Аудитория №{nowTimetable[day, i].classroom}");
+                Console.WriteLine($"Преподаватель - {nowTimetable[day, i].teacher}");
+                Console.WriteLine(" ");
+                Console.ResetColor();
+            }
         }
     }
 }
