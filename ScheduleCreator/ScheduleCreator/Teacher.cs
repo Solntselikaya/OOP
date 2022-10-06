@@ -12,10 +12,8 @@ namespace ScheduleCreator
         public list<string> subgect;
         bool IsFree(int day, int lesson)
         {
-            if (day >= 0 and day<6 && lesson >= 0 and lesson<7){
-                if (workload[day][lesson] == true)
-                    return true;
-                else return false;
+            if ( day >= 0 && day < 6 && lesson >= 0 && lesson < 7 ){
+                return workload[day][lesson];
             }
             else Console.WriteLine("Ничеси!!Ошибка ввода даты или номера пары");
             return false;

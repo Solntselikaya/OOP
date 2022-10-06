@@ -10,22 +10,22 @@ namespace ScheduleCreator
 
         private Scheddule scheddule;
        
-        
-
-        public List<Teacher> AssignTeachers()
+        public void AssignTeachers()
         {
             
+            Console.Write("Введите имя учителя: ");
+            inputTeachers.Add(new Teacher());
         }
 
         public void AssignClassrooms()
         {
-            
+            return inputClassrooms;
             
         }
 
         public void AssignStudyPlans()
         {
-            
+            return inputStudyPlans;
             
         }
         

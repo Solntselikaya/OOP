@@ -9,11 +9,7 @@ namespace ScheduleCreator
     abstract class Element: IAmFree
     {
         protected string name = "Undefined";
-        public string Name
-        {
-            set { name = value; }
-            get { return name; }
-        }
+        public string Name { get; set; }
 
         //private string name;//фамилия преподавателя/номер группы/номер аудитории(для дочерних элементов)
         abstract private bool[6][7] workload;//массив 6 на 7 (6 дней и каждый день максимум 7 пар)   
@@ -22,7 +18,7 @@ namespace ScheduleCreator
 
         abstract public void DoBusy(int day, int lesson)
         {
-            if (day >= 0 and day<6 and lesson >=0 and lesson<7)
+            if (day >= 0 && day<6 && lesson >=0 && lesson<7)
                 workload[day][lesson] = true;
             else Console.WriteLine("Ошибка ввода даты или номера пары");
         }
