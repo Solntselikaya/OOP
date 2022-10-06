@@ -9,25 +9,25 @@ namespace ScheduleCreator
 
     internal class Printer 
     {
-        public void PrintTimetableOfGroup(string number)
+        public void PrintTimeTableOfGroup(string number)
         {
-            Console.WriteLine($"Schedule of group ¹{number}");
+            Console.WriteLine($"Schedule of group ï¿½{number}");
             Console.WriteLine(" ");
             Console.WriteLine("Monday");
-            printDayTimetable(0, number);
+            PrintDayTimetable(0, number);
             Console.WriteLine("Tuesday");
-            printDayTimetable(1, number);
+            PrintDayTimetable(1, number);
             Console.WriteLine("Wednesday");
-            printDayTimetable(2, number);
+            PrintDayTimetable(2, number);
             Console.WriteLine("Thursday");
-            printDayTimetable(3, number);
+            PrintDayTimetable(3, number);
             Console.WriteLine("Friday");
-            printDayTimetable(4, number);
+            PrintDayTimetable(4, number);
             Console.WriteLine("Saturday");
-            printDayTimetable(5, number);
+            PrintDayTimetable(5, number);
         }
 
-        private void printDayTimetable(int day, string number)
+        private void PrintDayTimetable(int day, string number)
         {
             Timetable nowTimetable = Schedule.schedule[number];
             for (int i = 0; i < 7; i++)
@@ -51,8 +51,8 @@ namespace ScheduleCreator
                         break;
                 }
                 Console.WriteLine(" ");
-                Console.WriteLine($"Lesson ¹{i} - {nowTimetable[day,i].name}");
-                Console.WriteLine($"Classroom ¹{nowTimetable[day, i].classroom}");
+                Console.WriteLine($"Lesson ï¿½{i} - {nowTimetable[day,i].name}");
+                Console.WriteLine($"Classroom ï¿½{nowTimetable[day, i].classroom}");
                 Console.WriteLine($"Teacher - {nowTimetable[day, i].teacher}");
                 Console.WriteLine(" ");
                 Console.ResetColor();
