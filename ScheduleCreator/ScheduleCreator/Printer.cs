@@ -11,19 +11,19 @@ namespace ScheduleCreator
     {
         public void PrintTimetableOfGroup(string number)
         {
-            Console.WriteLine($"Расписание группы №{number}");
+            Console.WriteLine($"Schedule of group №{number}");
             Console.WriteLine(" ");
-            Console.WriteLine("Понедельник");
+            Console.WriteLine("Monday");
             printDayTimetable(0, number);
-            Console.WriteLine("Вторник");
+            Console.WriteLine("Tuesday");
             printDayTimetable(1, number);
-            Console.WriteLine("Среда");
+            Console.WriteLine("Wednesday");
             printDayTimetable(2, number);
-            Console.WriteLine("Четверг");
+            Console.WriteLine("Thursday");
             printDayTimetable(3, number);
-            Console.WriteLine("Пятница");
+            Console.WriteLine("Friday");
             printDayTimetable(4, number);
-            Console.WriteLine("Суббота");
+            Console.WriteLine("Saturday");
             printDayTimetable(5, number);
         }
 
@@ -51,9 +51,9 @@ namespace ScheduleCreator
                         break;
                 }
                 Console.WriteLine(" ");
-                Console.WriteLine($"Пара №{i} - {nowTimetable[day,i].name}");
-                Console.WriteLine($"Аудитория №{nowTimetable[day, i].classroom}");
-                Console.WriteLine($"Преподаватель - {nowTimetable[day, i].teacher}");
+                Console.WriteLine($"Lesson №{i} - {nowTimetable[day,i].name}");
+                Console.WriteLine($"Classroom №{nowTimetable[day, i].classroom}");
+                Console.WriteLine($"Teacher - {nowTimetable[day, i].teacher}");
                 Console.WriteLine(" ");
                 Console.ResetColor();
             }
